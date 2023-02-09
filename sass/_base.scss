@@ -1,0 +1,77 @@
+$search-bar-border: #e6e6e6;
+$stats-color: #70757a;
+$clear-button-color: #d9d9d9;
+$backgroud-color: white;
+$font-color: rgb(0, 0, 0);
+$logo-blue: #4885ed;
+$logo-red: rgb(224, 19, 19);
+$logo-yellow: yellow;
+$logo-green: rgb(0, 93, 28);
+$link-color: #1a0dab;
+$link-visited-color: #609;
+$link-outline-color: rgb(0, 0, 0);
+$font-stack: "Roboto", Arial, sans-serif;
+
+%flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexColumn {
+    @extend %flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@mixin flexCenter {
+    @extend %flex;
+    justify-content: center;
+}
+
+@mixin mq($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: $backgroud-color;
+    color: $font-color;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: $font-stack;
+    font-size: 22px;
+}
+
+main {
+    @include flexColumn();
+    min-height: calc(100vh - 60px);
+}
+
+footer {
+    width: 100vw;
+    height: 100vh;
+    @include flexCenter();
+
+    p {
+        color: $stats-color;
+        font-size: 0.5rem;
+        @include mq(768px);
+    }
+
+    a {
+        color: $stats-color;
+    }
+}
+
+img {
+    display: block;
+}

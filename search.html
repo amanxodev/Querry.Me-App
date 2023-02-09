@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+    <script src="./js/main.js" type="module"></script>
+    <title>Query.Me!.com</title>
+</head>
+
+<body>
+    <main>
+        <h1 class="offscreen">Query.Me!, A Wikipedia Powered Search Engine. Built by Aman Dev.</h1>
+        <section class="searchEntry">
+            <h2 class="offscreen">Search Term Entry</h2>
+            <div class="img-logo">
+                <a href="search.html">
+                    <img src="./img/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="logo" aria-hidden="true">
+                <span class="blue">Q</span>
+                <span class="red">U</span>
+                <span class="yellow">E</span>
+                <span class="blue">R</span>
+                <span class="green">Y</span>
+                <span class="red">.</span>
+                <span class="blue">M</span>
+                <span class="yellow">E</span>
+                <span class="red exclaim">!</span>
+            </div>
+            <form id="searchBar" class="searchBar" role="search">
+                <label for="search" class="offscreen">
+                    Ask me any Query!
+                </label>
+                <input type="text" name="search" id="search" autocomplete="off" role="searchbox"
+                    placeholder="Any Query?..." />
+                <div id="clear" class="none button clear" role="button" tabindex="0" aria-label="Clear search terms">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <button id="searchButton" class="button searchButton" type="submit" aria-label="submit button">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass blue"></i>
+                </button>
+            </form>
+        </section>
+        <section class="results">
+            <h2 class="offscreen">Search Result</h2>
+            <div class="statsBar">
+                <div class="stats" id="stats" aria-live="assertive"></div>
+            </div>
+            <div id="searchResults" class="searchResults">
+                <!-- <div class="resultItem">
+                    <div class="resultTitle">
+                        <a href="">Dachsund</a>
+                    </div>
+                    <div class="resultContents">
+                        <div class="resultImage">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Short-haired-Dachshund.jpg/200px-Short-haired-Dachshund.jpg"
+                                alt="Dog">
+                        </div>
+                        <div class="resultText">
+                            <p class="resultDescription">
+                                The Dachsund (uk: DAKS-end-, -hunnd, -huunt or us: DAKS....)
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <span aria-hidden="true"> &lt;&lt;</span> Powered by <a href="https://www.wikipedia.org"
+                target="_blank">Wikipedia</a>
+            <span aria-hidden="true"> &gt;&gt;</span>
+        </p>
+    </footer>
+</body>
+
+</html>
